@@ -1,48 +1,132 @@
-<!DOCTYPE html>
-<!-- saved from url=(0031)https://proxyxhack.netlify.app/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <title>𝐇𝟒𝐗 𝐀𝐈 𝐖𝐄𝐁 ㊨</title>
-  <link rel="stylesheet" href="./𝐇𝟒𝐗 𝐀𝐈 𝐖𝐄𝐁 ㊨_files/style.css">
-
-<style>
-    body { margin: 0; overflow: hidden; }
-    #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; }
-    #resultDisplay { position: relative; z-index: 1; } /* Ensure the prediction box stays on top */
-</style><script src="./𝐇𝟒𝐗 𝐀𝐈 𝐖𝐄𝐁 ㊨_files/particles.min.js.download"></script></head>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Rewards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body{font-family:'Inter',sans-serif;background:linear-gradient(135deg,#667eea,#764ba2);margin:0;padding:0;}
+    .container{max-width:500px;margin:0 auto;padding:1rem;}
+    .card{background:rgba(255,255,255,0.95);border-radius:1.5rem;padding:2rem;margin-top:3rem;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+    .btn{padding:1rem;border-radius:1rem;font-weight:600;cursor:pointer;margin-top:1rem;display:block;width:100%;transition:transform 0.2s ease;}
+    .btn:hover{transform:scale(1.05);}
+    .btn-green{background:linear-gradient(90deg,#22c55e,#4ade80);color:white;animation:pulse 2s infinite;}
+    .btn-blue{background:linear-gradient(90deg,#3b82f6,#60a5fa);color:white;}
+    .input-box{width:100%;padding:0.8rem;border-radius:1rem;border:1px solid #ccc;margin-top:1rem;}
+    .hidden{display:none;}
+    @keyframes pulse{
+      0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.7);}
+      50%{box-shadow:0 0 20px 5px rgba(34,197,94,0.4);}
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.mb-4{margin-bottom:1rem}.mt-3{margin-top:0.75rem}.mb-2{margin-bottom:0.5rem}.hidden{display:none}.text-2xl{font-size:1.5rem;line-height:2rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}</style></head>
 <body>
-<!-- partial:index.partial.html -->
-
-
-
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝐇𝟒𝐗 𝐀𝐈 𝐖𝐄𝐁 ㊨</title>
-    <link rel="stylesheet" href="./𝐇𝟒𝐗 𝐀𝐈 𝐖𝐄𝐁 ㊨_files/styles.css">
-
-
-    <div class="header">𝐇𝟒𝐗 𝐀𝐈 𝐖𝐄𝐁 ㊨</div>
-    <div class="result-container">
-        <div class="period-timer">
-            <div>Period: <span id="period1m">20250228100010516</span></div>
-            <div>Timer: <span id="timer1m">00:49</span></div>
-        </div>
-        <div class="result-box">
-            <h2>Current Result</h2>
-            <div id="resultDisplay" class="result big">BIG</div>
-        </div>
-        <div class="button-container">
-            <a href="https://telegram.me/H4X_KINGDOM%20target=" _blank"="" class="button">JOIN CHANNEL</a>
-            <a href="http://www.sikkim7.com/#/register?invitationCode=483144695092" target="_blank" class="button">REGISTER</a>
-        </div>
+  <div class="container">
+    <div class="card">
+      <h1 class="text-2xl font-bold mb-4" id="congrats">🎉 Congratulations! You Won ₹200 🎉</h1>
+      <button id="withdraw-btn" class="btn btn-green">Withdraw Now</button>
     </div>
 
-    <script src="./𝐇𝟒𝐗 𝐀𝐈 𝐖𝐄𝐁 ㊨_files/script.js.download"></script><div id="particles-js"><canvas class="particles-js-canvas-el" width="1912" height="954" style="width: 100%; height: 100%;"></canvas></div>
+    <div id="withdrawal-modal" class="card">
+      <h2 class="text-xl font-bold mb-4">Join Channels to Withdraw</h2>
+      <div id="channel-list" class="mb-4">
+              <a href="https://t.me/+DWcN48srLs42ODFl" target="_blank" class="btn btn-green mb-2">JOIN 1</a>
+            
+              <a href="https://t.me/+xyfHXKLZalsyMmM1" target="_blank" class="btn btn-green mb-2">JOIN 2</a>
+            
+              <a href="https://t.me/+VwVCrdDmqe9lMmY1" target="_blank" class="btn btn-green mb-2">JOIN 3</a>
+            
+              <a href="https://t.me/+Yl3Jn1f9a2k5ZmQ1" target="_blank" class="btn btn-green mb-2">JOIN 4</a>
+            
+              <a href="https://t.me/+uO1wWSYzFZk2NzA1" target="_blank" class="btn btn-green mb-2">JOIN 5</a>
+            
+              <a href="https://t.me/+QJC4l6Vl-LFkYjJl" target="_blank" class="btn btn-green mb-2">JOIN 6</a>
+            
+              <a href="https://t.me/+SEPI_bvperMyM2Y1" target="_blank" class="btn btn-green mb-2">JOIN 7</a>
+            
+              <a href="https://t.me/addlist/nQsJn98hEi04Y2E1" target="_blank" class="btn btn-green mb-2">DAILY 3K - 4K</a>
+            
+              <a href="https://t.me/+KpBKrv_giCUzNzY9" target="_blank" class="btn btn-green mb-2">JOIN 8</a>
+            
+              <a href="https://t.me/+nxUu-w3yNPs1OWY1" target="_blank" class="btn btn-green mb-2">JOIN 9</a>
+            
+              <a href="https://t.me/+XJ3t43g_eLQ4Zjll" target="_blank" class="btn btn-green mb-2">JOIN 10</a>
+            </div>
+      <input type="text" id="upi-id" class="input-box" placeholder="Enter your UPI ID">
+      <button id="apply-btn" class="btn btn-blue">Apply</button>
+      <p id="success-msg" class="text-green-600 mt-3 hidden">✅ Withdrawal Success! Wait 2-4 hours.</p>
+    </div>
+  </div>
 
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDwJoR_DOMN9Q7oxHiiD1WAbQPBw2dPUdc",
+      authDomain: "ayush-ff88b.firebaseapp.com",
+      databaseURL: "https://ayush-ff88b-default-rtdb.firebaseio.com",
+      projectId: "ayush-ff88b",
+      storageBucket: "ayush-ff88b.appspot.com",
+      messagingSenderId: "494530357079",
+      appId: "1:494530357079:web:06073f4585e06d72960012"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
 
+    const withdrawBtn = document.getElementById('withdraw-btn');
+    const modal = document.getElementById('withdrawal-modal');
+    const channelList = document.getElementById('channel-list');
+    const applyBtn = document.getElementById('apply-btn');
+    const upiInput = document.getElementById('upi-id');
+    const successMsg = document.getElementById('success-msg');
 
-  <script src="./𝐇𝟒𝐗 𝐀𝐈 𝐖𝐄𝐁 ㊨_files/script.js.download"></script>
+    // 🎉 Confetti when page loads
+    function launchConfetti(){
+      confetti({particleCount:100,spread:70,origin:{y:0.6}});
+    }
+    window.onload = launchConfetti;
 
+    withdrawBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
 
+    // Load channels from Firebase
+    function loadChannels() {
+      channelList.innerHTML = "";
+      db.ref('channels').once('value', snapshot => {
+        if (!snapshot.exists()) {
+          channelList.innerHTML = `
+            <a href="https://t.me/+DWcN48srLs42ODFl" target="_blank" class="btn btn-green mb-2">Join Prime Rewards Channel</a>
+          `;
+        } else {
+          snapshot.forEach(child => {
+            const data = child.val();
+            channelList.innerHTML += `
+              <a href="${data.link}" target="_blank" class="btn btn-green mb-2">${data.name}</a>
+            `;
+          });
+        }
+      });
+    }
+    loadChannels();
 
+    // Apply Withdrawal
+    applyBtn.addEventListener('click', () => {
+      const upi = upiInput.value.trim();
+      if (!upi) { alert("Enter valid UPI ID"); return; }
+      const newKey = db.ref('withdrawals').push().key;
+      db.ref('withdrawals/'+newKey).set({
+        upi: upi,
+        amount: 200,
+        status: "Pending",
+        timestamp: Date.now()
+      }).then(() => {
+        successMsg.classList.remove('hidden');
+        applyBtn.disabled = true;
+      });
+    });
+  </script>
+
+  
 </body></html>
